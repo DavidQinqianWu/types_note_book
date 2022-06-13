@@ -8,7 +8,7 @@ type IsUnion<A, B = A> = A extends A
         : true
     : never;
 
-type IsUnionRes = IsUnion<1 | 2>;
+type IsUnionRes = IsUnion<1 | 2>; //true
 
 // 实例, 这里 [B] extends [A] 的意思, 即B整体这个变量属性是否等于A这个整体
-type IsUnionRes2 = IsUnion<1>;
+type IsUnionRes2 = IsUnion<1>; // false
